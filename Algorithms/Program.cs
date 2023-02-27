@@ -10,11 +10,13 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Algorithm Programs");         
+            Console.WriteLine("Welcome to the Algorithm Programs");
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\n Enter the Option GivenBelow: \n 1.InsertionSort \n 2.BubbleSort \n 3.Exit");
+                Console.WriteLine("\n Enter the Option GivenBelow: \n 1.InsertionSort \n 2.BubbleSort \n 3.PrimeNumber " +
+                    "Within the range " +
+                    "\n 4.Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -25,6 +27,10 @@ namespace Algorithms
                     case 2:
                         BubbleSorting bubble = new BubbleSorting();
                         bubble.Sort();
+                        break;
+                    case 3:
+                        PrimeNumber num = new PrimeNumber();
+                        num.PrimeNum();
                         break;
                     default:
                         Console.WriteLine("Enter a valid Option");
