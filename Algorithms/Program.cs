@@ -10,20 +10,24 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Algorithm Programs");
-            InsertionSort sort = new InsertionSort();
+            Console.WriteLine("Welcome to the Algorithm Programs");         
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\n Enter the Option GivenBelow: \n 1.InsertionSort \n 2.Exit");
+                Console.WriteLine("\n Enter the Option GivenBelow: \n 1.InsertionSort \n 2.BubbleSort \n 3.Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
                     case 1:
+                        InsertionSort sort = new InsertionSort();
                         sort.Insertion();
                         break;
                     case 2:
-                        flag = false;
+                        BubbleSorting bubble = new BubbleSorting();
+                        bubble.Sort();
+                        break;
+                    default:
+                        Console.WriteLine("Enter a valid Option");
                         break;
                 }
             }
